@@ -1,4 +1,8 @@
-<template><div class="home"></div></template>
+<template>
+  <div class="home">
+    <Popup v-if="popupActive" />
+  </div>
+</template>
 
 <script>
 export default {

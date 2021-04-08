@@ -1,13 +1,9 @@
-<template>
-    $END$
-</template>
+<template><div>Popup</div></template>
 
 <script>
-  export default {
-    name: 'Popup'
-  }
+export default {
+  name: 'Popup',
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
