@@ -33,9 +33,13 @@ export default {
         console.log(this.userEmail)
         this.sendForm()
         this.$emit('popupClose')
+        this.clearForm()
       } else {
         this.error = 'Please, enter a valid email'
       }
+    },
+    clearForm() {
+      this.userEmail = ''
     },
     validateEmail(email) {
       const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
