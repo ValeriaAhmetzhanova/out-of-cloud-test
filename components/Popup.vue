@@ -2,7 +2,7 @@
   <div class="popup-wrapper">
     <div class="popup">
       <div class="btn--close" @click="$emit('popupClose')">×</div>
-      <form class="popup-form" @submit="handleSubmit">
+      <form class="popup-form" @submit.prevent="handleSubmit">
         <div class="popup-form-item">
           <label for="email">Email </label>
           <input id="email" v-model="userEmail" type="text" name="email" />
@@ -27,7 +27,6 @@ export default {
   },
   methods: {
     handleSubmit() {
-      event.preventDefault()
       if (this.validateEmail(this.userEmail)) {
         this.error = ''
         // eslint-disable-next-line no-console
