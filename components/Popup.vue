@@ -1,10 +1,10 @@
 <template>
   <div class="popup-wrapper">
     <div class="popup">
-      <div class="btn--close" @click="$emit('popupClose')">x</div>
+      <div class="btn--close" @click="$emit('popupClose')">×</div>
       <form class="popup-form" @submit="handleSubmit">
-        <div>
-          <label for="email">Email: </label>
+        <div class="popup-form-item">
+          <label for="email">Email </label>
           <input id="email" v-model="userEmail" type="text" name="email" />
           <div class="popup-form-error">
             {{ error }}
@@ -70,9 +70,9 @@ export default {
   position: relative;
   width: fit-content;
   height: fit-content;
-  border: 1px solid grey;
+  border-radius: 8px;
   padding: 2rem 3rem;
-  background-color: white;
+  background: #f4f7f8;
 }
 .btn--close {
   position: absolute;
@@ -82,13 +82,53 @@ export default {
 }
 .btn--submit {
   margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  outline: 0;
+  border: none;
+  border-radius: 3px;
+  background: #7ccfb6;
+  font-weight: 600;
+}
+.btn--submit:hover {
+  background-color: #8fe6cc;
 }
 .popup-form {
   text-align: center;
 }
+.popup-form label,
+.popup-form input {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.popup-form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.popup-form input {
+  background-color: #e8eeef;
+  border: none;
+  border-radius: 3px;
+  color: #738089;
+  font-weight: 600;
+  padding: 10px;
+  width: 100%;
+}
+.popup-form input:focus {
+  outline: none;
+  background: #e4ebef;
+}
+.popup-form-item {
+  position: relative;
+  min-height: 80px;
+}
 .popup-form-error {
+  position: absolute;
+  bottom: -5px;
   color: red;
   font-size: 0.8rem;
-  padding: 0.2rem;
+  text-align: left;
+  line-height: 1.2;
 }
 </style>

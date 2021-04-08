@@ -8,4 +8,8 @@
 export default {}
 </script>
 
-<style></style>
+<style>
+body {
+  font-family: Roboto sans-serif;
+}
+</style>
