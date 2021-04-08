@@ -12,6 +12,14 @@ export default {
       popupActive: false,
     }
   },
+  mounted() {
+    setTimeout(() => this.togglePopup(), 3000)
+  },
+  methods: {
+    togglePopup() {
+      this.popupActive = !this.popupActive
+    },
+  },
 }
 </script>
 
