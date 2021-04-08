@@ -30,6 +30,7 @@ export default {
       event.preventDefault()
       if (this.validateEmail(this.userEmail)) {
         this.error = ''
+        // eslint-disable-next-line no-console
         console.log(this.userEmail)
         this.sendForm()
         this.$emit('popupClose')
