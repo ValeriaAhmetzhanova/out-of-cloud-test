@@ -17,13 +17,21 @@ export default {
   },
   methods: {
     togglePopup() {
+      if (this.popupActive) {
+        document.body.classList.remove('overflow-hidden')
+      } else {
+        document.body.classList.add('overflow-hidden')
+      }
       this.popupActive = !this.popupActive
     },
   },
 }
 </script>
 
-<style scoped>
+<style>
+.overflow-hidden {
+  overflow: hidden;
+}
 .home {
   /*to check scrolling*/
   height: 200vh;
