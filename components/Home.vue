@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Popup v-if="popupActive" />
+    <Popup v-if="popupActive" @popupClose="togglePopup" />
   </div>
 </template>
 
